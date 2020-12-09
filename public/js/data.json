@@ -1,0 +1,83 @@
+{
+    "user":{
+        "name": "Remy Sameh",
+        "image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/9FDE/production/_113262904_tv062320432.jpg"
+    },
+    "friends":[
+        {
+            "id": "22",
+            "name": "Sam Nagep",
+            "image": "https://images.wisegeek.com/guitarist-playing-an-acoustic-guitar.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Ram Nagep",
+            "image": "https://vistapointe.net/images/musician-1.jpg"
+        },
+        {
+            "id": "14",
+            "name": "Hany Nasser",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Ilham_Al_Madfai_in_2005.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Samy Sadek",
+            "image": "https://www.blueblue.com.eg/wp-content/uploads/B3A5982.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Goeria Hamdy",
+            "image": "https://www.marketplace.org/wp-content/uploads/2020/07/theatre.jpg"
+        },
+        {
+            "id": "45",
+            "name": "Haidy Gorge",
+            "image": "https://cdn.civitatis.com/corea-del-sur/seul/galeria/patio-butacas-teatro-jeongdong.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Sara Rabia",
+            "image": "https://assets.cairo360.com/app/uploads/2016/04/article_original_10012_20160426_571f5f27563a6.jpg"
+        }
+    ],
+    "groups":[
+        {
+            "id": "22",
+            "name": "Friends",
+            "image": "https://www.blueblue.com.eg/wp-content/uploads/B3A5982.jpg"
+        },
+        {
+            "id": "12",
+            "name": "Alexandia",
+            "image": "https://i.dailymail.co.uk/i/pix/2011/05/12/article-1386156-031D7A130000044D-842_468x488.jpg"
+        },
+        {
+            "id": "14",
+            "name": "El-Akhbar",
+            "image": "https://images.adsttc.com/media/images/5ec3/4138/b357/657a/0500/0062/medium_jpg/200525_dZwH_Kunstenpand_Hart_van_Zuid.jpg"
+        },
+        {
+            "id": "10",
+            "name": "El-Salam",
+            "image": "https://broadwaydirect.com/wp-content/uploads/2017/10/Haunted-Theater.jpg"
+        },
+        {
+            "id": "9",
+            "name": "New Design",
+            "image": "https://www.syracuse.com/resizer/DTmyFhxy7EDX9C9vviLIGzEeJhQ=/450x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/IVVEQZ52RBDBZPCBE63GL4RVHA.JPG"
+        },
+        {
+            "id": "45",
+            "name": "El-Dof3a",
+            "image": "https://vistapointe.net/images/musician-1.jpg"
+        },
+        {
+            "id": "13",
+            "name": "Hayat",
+            "image": "https://i.dailymail.co.uk/i/pix/2011/05/12/article-1386156-031D7A130000044D-842_468x488.jpg"
+        }
+    ],
+    "posts":[
+
+    ]
+}
