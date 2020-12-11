@@ -11,7 +11,7 @@ import Advertisment from './Advertisment';
 // import style
 import {useStyles} from './style'
 
-function Timeline() {
+function Timeline(props) {
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -21,7 +21,7 @@ function Timeline() {
                     <Grid container item xs={12} spacing={3} className={classes.sectionDesktop} style={{margin:0, padding:0}}>
                         <Grid item xs={3} >
                             <Paper className={classes.paper} style={{ borderRadius: '10px' }} >
-                                <LeftSide />
+                                <LeftSide data={props.data} />
                             </Paper>
                         </Grid>
                         <Grid container item xs={6} spacing={3}>
@@ -32,7 +32,7 @@ function Timeline() {
                             </Grid>
                             <Grid  item xs={12}>
                                 <Paper className={classes.recent} style={{ borderRadius: '10px' }}>
-                                    <RecentPosts/>
+                                    <RecentPosts data={props.data} />
                                 </Paper>
                             </Grid>
                         </Grid>
@@ -51,7 +51,7 @@ function Timeline() {
                             </Grid>
                             <Grid  item xs={12} spacing={2}>
                                 <Paper className={classes.recent} style={{ borderRadius: '10px' }}>
-                                    <RecentPosts />
+                                    <RecentPosts data={props.data} />
                                 </Paper>
                             </Grid>
                         </Grid>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, InputBase, Badge, MenuItem, Menu, Divider } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, InputBase, Badge, MenuItem, Menu, Divider, Avatar } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
@@ -13,32 +13,20 @@ import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 
 import {useStyles} from './style';
 
-function Nav() {
+function Nav(props) {
+  const user = props.data.user
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = 'primary-search-account-menu';
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -48,6 +36,10 @@ function Nav() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+      <MenuItem className={classes.menuItem}>
+        <Avatar src={user.image} fontSize='small'></Avatar> 
+        <p>{user.name}</p>
+      </MenuItem>
       <MenuItem className={classes.menuItem}>
         <IconButton
           aria-label="account of current user"
@@ -136,6 +128,12 @@ function Nav() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <IconButton
+                aria-label="account of current user"
+                color="inherit"
+              >
+                <Avatar src={user.image} fontSize='small'></Avatar> 
+            </IconButton>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -147,16 +145,8 @@ function Nav() {
               </Badge>
             </IconButton>
             <IconButton
-              aria-label="account of current user"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-            <IconButton
               edge="end"
               aria-label="log out"
-              onClick={handleProfileMenuOpen}
               color="inherit"
             >
                <ExitToAppIcon />

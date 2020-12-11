@@ -59,6 +59,6 @@ export const useStyles = makeStyles((theme) => ({
       },
     },
     menuItem:{
-      height:'10px'
+      height:'5vh'
     }
   }));

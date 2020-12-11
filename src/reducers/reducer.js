@@ -1,6 +1,6 @@
 import { GET_DATA } from '../actions/types';
 
-export default (state = [], action) => {
+export default function reducer(state = [], action){
     switch (action.type){
         case GET_DATA :
             return action.payload;

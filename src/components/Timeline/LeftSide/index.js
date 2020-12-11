@@ -1,13 +1,22 @@
 import React from 'react';
 import {CssBaseline, Container, Avatar, Grid, Typography, Divider, Link} from '@material-ui/core';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
-import {getData} from '../../../actions/getData'
 // import style
 import {useStyles, StyledBadge} from './style'
 
 function LeftSide(props) {
-  console.log( props.getData() );
+  const data = props.data
   const classes = useStyles();
+  const renderFriends = data.friends.map( friend =>{
+    return(
+      <Avatar alt={friend.name} src={friend.image} key={friend.id} />
+    )
+  })
+  const renderGroups = data.groups.map( group =>{
+    return(
+      <Avatar alt={group.name} src={group.image} key={group.id} />
+    )
+  })
   return (
     <React.Fragment>
         <CssBaseline />
@@ -22,31 +31,23 @@ function LeftSide(props) {
                     }}
                     variant="dot"
                   >
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className={classes.large} />
+                  <Avatar alt={data.user.name} src={data.user.image}className={classes.large} />
                 </StyledBadge>
               </Grid>
               <Grid item xs={12}>
-                <Typography variant='h5'> Remy Sharp </Typography>
+                <Typography variant='h5'> {data.user.name} </Typography>
               </Grid>
               <Divider variant="middle" className={classes.divide}/>
               <Grid item xs={12}>
                 <Typography className={classes.title} > Friends </Typography>
                 <AvatarGroup max={4} className={classes.details} >
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-                  <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-                  <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
-                  <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+                  {renderFriends}
                 </AvatarGroup>
               </Grid>
               <Grid item xs={12}>
                 <Typography className={classes.title} > Groups </Typography>
                 <AvatarGroup max={4} className={classes.details} >
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                  <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
-                  <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-                  <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
-                  <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+                  {renderGroups}
                 </AvatarGroup>
               </Grid>
               <Divider variant="middle" className={classes.divide}/>

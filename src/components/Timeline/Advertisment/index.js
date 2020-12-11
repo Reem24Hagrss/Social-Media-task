@@ -15,13 +15,13 @@ function Advertisment() {
                 <Grid xs={12} item>
                   <Carousel autoPlay showArrows={false} infiniteLoop={true} showStatus={false} showIndicators={false} showThumbs={false} >
                       <div className={classes.advCar}>
-                          <img src='https://via.placeholder.com/150x200/0000FF/808080' />
+                          <img alt='advertisment' src='https://via.placeholder.com/150x200/0000FF/808080' />
                       </div>
                       <div className={classes.advCar}>
-                          <img src='https://via.placeholder.com/150x200/00FF00/808080' />
+                          <img alt='advertisment' src='https://via.placeholder.com/150x200/00FF00/808080' />
                       </div>
                       <div className={classes.advCar}>
-                          <img src='https://via.placeholder.com/150x200/FF0000/808080' />
+                          <img alt='advertisment' src='https://via.placeholder.com/150x200/FF0000/808080' />
                       </div>
                   </Carousel>
                 </Grid>
@@ -32,9 +32,6 @@ function Advertisment() {
                   <Paper className={classes.advVer} style={{backgroundImage:"url('https://via.placeholder.com/150x200/0000FF/808080')"}}></Paper>
                   <Paper className={classes.advVer} style={{backgroundImage:"url('https://via.placeholder.com/150x200/0000FF/808080')"}}></Paper>
                 </Grid>
-                {/* <Grid item xs={6}> 
-                  <Paper className={classes.advVer} style={{backgroundImage:"url('https://via.placeholder.com/150x200/0000FF/808080')"}}></Paper>
-                </Grid> */}
                 <Grid item xs={12}> 
                   <Paper className={classes.advBot} style={{backgroundImage:"url('https://via.placeholder.com/150x200/0000FF/808080')"}}></Paper>
                 </Grid>
